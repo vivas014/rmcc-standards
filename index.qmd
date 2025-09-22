@@ -1,0 +1,16 @@
+# Intoduction {.unnumbered}
+
+This guide provides a structured guide for managing *short-term* and *long-term projects* at the Research Methodology Consulting Center (RMCC). Its purpose is to ensure consistency, compliance, and reproducibility in every engagement, while also making project work transparent and collaborative.
+
+Short-term projects typically last *1 to 11 months* and are focused on targeted deliverables, such as a survey, workshop, or discrete analysis.  
+
+Long-term projects span *12 months or more* and often align with sustained collaborations or external grants. These projects require more extensive planning, documentation, and ongoing communication.
+
+Across both project types, this guide emphasizes:
+
+- *Consistency*: Standardized processes for contracts, data, and deliverables.  
+- *Compliance*: Adherence to RMCC, University, and sponsor requirements (e.g., data use, IRB, authorship).  
+- *Reproducibility*: Clear documentation and code practices that enable future verification.  
+- *Accountability*: Defined roles, responsibilities, and communication expectations.  
+
+This document is intended for RMCC staff, faculty collaborators, graduate research assistants, and external partners engaged in contracted projects. It should serve as both a *reference manual* and a *practical playbook* during the lifecycle of a contract.

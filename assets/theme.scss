@@ -1,0 +1,73 @@
+/*-- scss:defaults --*/
+
+// Import fonts (define mainfont in _quarto.yml)
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+// fonts
+$nunito: 'Nunito', sans-serif; 
+$josefin: 'Josefin Sans', sans-serif; 
+
+// Colors
+$light-green: #D1D9CE;
+$medium-green: #98A08D;
+$dark-green: #757B6D;
+$cream: #FDFBF7;
+$dark-gray: #5A5856;
+$medium-gray: #64605f;
+$violet: #846075;
+$terracotta: #BD6E53; 
+$terracotta-dark: #ffcc33;
+$hunter-green: #464B37;
+$terracotta-dark: #a15e47;
+$orange: #c27e00;
+$champagne: #E7CEBE;
+$purple: #9158A2; 
+$burnt-orange: #ad7237;
+$blue-gray: #466060;
+$wine: #7a0019;
+
+// Base document colors
+$navbar-bg: $cream;
+$navbar-fg: $medium-green; 
+$navbar-hl: $terracotta;//$orange;//$purple; 
+//$body-bg: $light-green;
+$body-color: $medium-gray;
+$footer-bg: $light-green; //$cream; 
+$link-color: $orange;// $orange;//$purple;
+
+// Inline code
+$code-bg: $cream;
+$code-color: $orange; 
+
+// Code blocks
+$code-block-bg: $cream;
+
+/*-- scss:rules --*/
+
+/* ELEMENT SELECTORS */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $josefin; 
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: $wine;
+}
+
+.fyi {
+  padding: 1em;
+  margin: 1em 0;
+  padding-left: 15px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  vertical-align: middle;
+  color: #000;
+  background-color: #ffe8ec;
+  border: solid 3px #7a0019;
+//  box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius:15px 255px;
+  }

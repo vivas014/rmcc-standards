@@ -1,0 +1,86 @@
+# Contracts {.unnumbered}
+
+At RMCC, our collaborative research and methodological work are built on a foundation of clear, mutual understanding. The primary tool we use to formalize that understanding is a `contract` (i.e., a short-term or long-term project engagement). To ensure *consistency, security, and ease of collaboration*, every new contract triggers the creation of a *dedicated folder on our secure shared drive*. This standardized structure is *mandatory* and serves as the *single source of truth* for all project materials.
+
+## Contract Repository Basics
+
+-   *One contract → one root folder* on the secure shared drive.
+-   All work products (data, code, documents, figures, decisions, and reports) must be stored under this root. <!-- -   Each `project` within a contract has its own subdirectory. A single contract can include one or more projects. -->
+
+## Naming Convention
+
+The naming convention for each `contract` is the following:
+
+> **\[PI Last Name or Institution\], \[Short Project Name\]**
+
+::: fyi
+*Good examples*
+
+-   Judy Anderson, RATE
+-   Christine Anderson, LAC
+:::
+
+Within each `contract`, some directories and files will be created as needed. These directories can range from administrative documents, papers, or some other material.
+
+The naming conventions for the directories and files in our `contract` are as follows:
+
+-   File names should be short but descriptive (less than 25 characters)
+-   All lowercase letters
+-   Avoid special characters and spaces in a file name
+-   Use hyphens instead of spaces to separate words
+-   Any names that include the date will use the *ISO 8601* date format (YYYY-MM-DD)
+
+## Standard Contract Structure (Example)
+
+This is what a typical `contract` looks like in our drive:
+
+![](img/00-contract.png){fig-align="center" width="366"}
+
+It is typical to show directory and file organization via a “directory tree”. The directory tree for this project is shown below.
+
+```         
+Christine Anderson, LAC/
+├── data
+├── scripts
+└── survey
+```
+
+A more detailed example of a `contract` is the following:
+
+```         
+Judy Anderson, RATE/
+├── administrative/
+│   ├── mou-2025-10-29.pdf
+│   ├── data-use-agreement.pdf
+│   ├── amendments.docx
+│   └── communications.pdf
+├── data/
+│   ├── raw-data.csv
+│   ├── processed-data.Rdata
+│   └── data-dictionary.xlsx
+├── regression-analysis/
+│   ├──regression-analysis.Rproj
+│   ├── scripts/
+│   │   ├── 00-functions.R
+│   │   ├── 01-descriptive-statistics.R
+│   │   └── 02-analysis.R
+│   ├── products/
+│   │   ├── report.qmd
+│   │   └── report.html
+│   ├── assets/
+│   │   └── references.bib
+│   └── figs/
+│       └── fig1.jpg
+├── communications/
+│   ├── emails.pdf
+│   ├── meeting-minutes.docx
+│   └── misc.docx
+└── project-management/
+    ├── project-charter.pdf
+    ├── timeline-milestones.pdf
+    └── status_reports.pub
+```
+
+Among these, `project` directories (e.g., `regression-analysis/`) contain the bulk of the creation process: code, assets, figures, and compiled products.
+
+Let's review them closely in the next section.

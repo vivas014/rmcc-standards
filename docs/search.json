@@ -1,0 +1,122 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "RMCC Contracts Management",
+    "section": "",
+    "text": "Intoduction\nThis guide provides a structured guide for managing short-term and long-term projects at the Research Methodology Consulting Center (RMCC). Its purpose is to ensure consistency, compliance, and reproducibility in every engagement, while also making project work transparent and collaborative.\nShort-term projects typically last 1 to 11 months and are focused on targeted deliverables, such as a survey, workshop, or discrete analysis.\nLong-term projects span 12 months or more and often align with sustained collaborations or external grants. These projects require more extensive planning, documentation, and ongoing communication.\nAcross both project types, this guide emphasizes:\n\nConsistency: Standardized processes for contracts, data, and deliverables.\n\nCompliance: Adherence to RMCC, University, and sponsor requirements (e.g., data use, IRB, authorship).\n\nReproducibility: Clear documentation and code practices that enable future verification.\n\nAccountability: Defined roles, responsibilities, and communication expectations.\n\nThis document is intended for RMCC staff, faculty collaborators, graduate research assistants, and external partners engaged in contracted projects. It should serve as both a reference manual and a practical playbook during the lifecycle of a contract.",
+    "crumbs": [
+      "Intoduction"
+    ]
+  },
+  {
+    "objectID": "01-contracts.html",
+    "href": "01-contracts.html",
+    "title": "Contracts",
+    "section": "",
+    "text": "Contract Repository Basics",
+    "crumbs": [
+      "Contracts"
+    ]
+  },
+  {
+    "objectID": "01-contracts.html#contract-repository-basics",
+    "href": "01-contracts.html#contract-repository-basics",
+    "title": "Contracts",
+    "section": "",
+    "text": "One contract → one root folder on the secure shared drive.\nAll work products (data, code, documents, figures, decisions, and reports) must be stored under this root.",
+    "crumbs": [
+      "Contracts"
+    ]
+  },
+  {
+    "objectID": "01-contracts.html#naming-convention",
+    "href": "01-contracts.html#naming-convention",
+    "title": "Contracts",
+    "section": "Naming Convention",
+    "text": "Naming Convention\nThe naming convention for each contract is the following:\n\n[PI Last Name or Institution], [Short Project Name]\n\n\nGood examples\n\nJudy Anderson, RATE\nChristine Anderson, LAC\n\n\nWithin each contract, some directories and files will be created as needed. These directories can range from administrative documents, papers, or some other material.\nThe naming conventions for the directories and files in our contract are as follows:\n\nFile names should be short but descriptive (less than 25 characters)\nAll lowercase letters\nAvoid special characters and spaces in a file name\nUse hyphens instead of spaces to separate words\nAny names that include the date will use the ISO 8601 date format (YYYY-MM-DD)",
+    "crumbs": [
+      "Contracts"
+    ]
+  },
+  {
+    "objectID": "01-contracts.html#standard-contract-structure-example",
+    "href": "01-contracts.html#standard-contract-structure-example",
+    "title": "Contracts",
+    "section": "Standard Contract Structure (Example)",
+    "text": "Standard Contract Structure (Example)\nThis is what a typical contract looks like in our drive:\n\n\n\n\n\nIt is typical to show directory and file organization via a “directory tree”. The directory tree for this project is shown below.\nChristine Anderson, LAC/\n├── data\n├── scripts\n└── survey\nA more detailed example of a contract is the following:\nJudy Anderson, RATE/\n├── administrative/\n│   ├── mou-2025-10-29.pdf\n│   ├── data-use-agreement.pdf\n│   ├── amendments.docx\n│   └── communications.pdf\n├── data/\n│   ├── raw-data.csv\n│   ├── processed-data.Rdata\n│   └── data-dictionary.xlsx\n├── regression-analysis/\n│   ├──regression-analysis.Rproj\n│   ├── scripts/\n│   │   ├── 00-functions.R\n│   │   ├── 01-descriptive-statistics.R\n│   │   └── 02-analysis.R\n│   ├── products/\n│   │   ├── report.qmd\n│   │   └── report.html\n│   ├── assets/\n│   │   └── references.bib\n│   └── figs/\n│       └── fig1.jpg\n├── communications/\n│   ├── emails.pdf\n│   ├── meeting-minutes.docx\n│   └── misc.docx\n└── project-management/\n    ├── project-charter.pdf\n    ├── timeline-milestones.pdf\n    └── status_reports.pub\nAmong these, project directories (e.g., regression-analysis/) contain the bulk of the creation process: code, assets, figures, and compiled products.\nLet’s review them closely in the next section.",
+    "crumbs": [
+      "Contracts"
+    ]
+  },
+  {
+    "objectID": "02-projects.html",
+    "href": "02-projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Within each contract, every major statistical analysis conducted on the contract’s data must have its own dedicated project subfolder. This ensures reproducibility, reduces confusion across analyses, and provides a clear audit trail of what was done, when, and by whom.\n\nGeneral Rules\n\nEach analysis → project subfolder .\n\nSubfolders must be named descriptively (method, focus, or phase of analysis).\n\nExamples:\n\nregression-analysis/\nlongitudinal-modeling/\n\n\n\nWhile there are any of a number of alternative organizational structures that may work in different situations, at RMCC we use a general strategy of creating projects. For each project, we will have, at a minimum, the following:\n\nassets\ndata\nfigs\nreports\nscripts\nproject.Rproj\nREADME.md\n\n\n\nDescription of each component\n\nassets: Supporting files used in the analysis but not generated by it. Examples: bibliographies (references.bib), style files, templates, and utility code snippets.These provide consistency across products and keep dependencies explicit.\ndata: Analysis-ready datasets and any derived extracts created for this project.\nfigs: Figures, tables, and other static visualizations generated by the scripts. Each file should be named with an ISO date or milestone tag to make versions traceable. This separation ensures that reports do not need to regenerate all graphics manually.\nreports: Written products associated with the project: Quarto manuscripts, HTML dashboards, PDF reports, or slide decks.This is the main “deliverables” folder, containing outputs meant for sharing with collaborators, sponsors, or publication.\nscripts: All code used to run the analysis. Scripts must be numbered in execution order (e.g., 00-functions.R, 01-cleaning.R, 02-analysis.R). Each script should be modular, reproducible, and clearly commented. This structure guarantees that others can reproduce results step by step.\nREADME.md: A plain-text overview of the project folder. It should describe:\n\nThe scope of the analysis\n\nKey datasets used\n\nMain deliverables expected\n\nEntry points for running the scripts\n\nContact information for the lead analyst\n\n\nThe README.md serves as the first stop for anyone entering the folder, making navigation easy.\n\n\nR projects\nCreating an R project is a way to inform RStudio about which folder is your project’s root directory. This also sets R’s working directory to your project’s root directory making it easier to access data and other files in your .QMD or .R documents. To create an R Project associated with the project root directory,\n\nClick the project icon in RStudio (it might say Project: (None) or something like that) and select New Project... (see screenshot below)\n\n\n\n\n\n\nIn the project wizard, select:\n\nExisting Directory,\nClick Browse and select the project root directory you created earlier\nClick Open\nClick Create Project\n\nThe R Project will then be created and you should now see this project (called project.Rproj) in the project directory. Our directory tree is now:\n└── project/\n    ├── assets\n    ├── data\n    ├── figs\n    ├── reports\n    ├── scripts\n    ├── project.Rproj\n    └── README.md\nOnce an R project has been created, it can be opened in RStudio by double-clicking on the .Rproj file.\n\n\nBenefits\n\nIsolation of analyses: Each statistical workflow stands alone.\n\nTransparency: Easy to trace which scripts produced which outputs.\n\nReproducibility: Easy to make re-runnings.\n\nScalability: Supports multiple simultaneous analyses within one contract.\n\n\nEvery time a new statistical analysis is planned under a contract, the first step is to create a new project subfolder following this template.\nThis rule applies even for exploratory or preliminary analyses.",
+    "crumbs": [
+      "Projects"
+    ]
+  },
+  {
+    "objectID": "03-qa.html",
+    "href": "03-qa.html",
+    "title": "Q&A",
+    "section": "",
+    "text": "Do we use GitHub or other version control tools?",
+    "crumbs": [
+      "Q&A"
+    ]
+  },
+  {
+    "objectID": "03-qa.html#do-we-use-github-or-other-version-control-tools",
+    "href": "03-qa.html#do-we-use-github-or-other-version-control-tools",
+    "title": "Q&A",
+    "section": "",
+    "text": "No. At RMCC, all analyses are conducted within R Projects stored in our Google Drive contract folders. This ensures that data, code, and outputs are always in a single secure location, consistent with our compliance obligations. While GitHub and other version control systems are useful for software development, they are not appropriate here because: - Many of our projects involve sensitive or restricted-use data.\n- External repositories may introduce unnecessary risks for data sharing.\n- Google Drive already provides version history, recovery, and collaborative editing.",
+    "crumbs": [
+      "Q&A"
+    ]
+  },
+  {
+    "objectID": "03-qa.html#how-do-we-track-versions-of-scripts-and-outputs",
+    "href": "03-qa.html#how-do-we-track-versions-of-scripts-and-outputs",
+    "title": "Q&A",
+    "section": "How do we track versions of scripts and outputs?",
+    "text": "How do we track versions of scripts and outputs?\n\n\nScripts are numbered sequentially (00-, 01-, 02-, …) to indicate their order of execution.\n\nGoogle Drive keeps a file version history, so prior versions can be recovered if needed.",
+    "crumbs": [
+      "Q&A"
+    ]
+  },
+  {
+    "objectID": "03-qa.html#what-if-multiple-people-are-working-on-the-same-script",
+    "href": "03-qa.html#what-if-multiple-people-are-working-on-the-same-script",
+    "title": "Q&A",
+    "section": "What if multiple people are working on the same script?",
+    "text": "What if multiple people are working on the same script?\n\n\nOnly one person at a time should actively edit a script file.\n\nIf collaboration is needed, break the workflow into multiple smaller scripts (01-cleaning.R, 02-analysis.R, etc.) so work can be parallelized.",
+    "crumbs": [
+      "Q&A"
+    ]
+  },
+  {
+    "objectID": "03-qa.html#what-if-i-need-to-run-a-new-analysis",
+    "href": "03-qa.html#what-if-i-need-to-run-a-new-analysis",
+    "title": "Q&A",
+    "section": "What if I need to run a new analysis?",
+    "text": "What if I need to run a new analysis?\n\nEvery new major statistical analysis requires a new project subfolder inside the contract.\nFollow the structure described in Projects:\n- scripts/\n- data/\n- reports/\n- figs/\n- assets/\n- README.md\nThis keeps analyses reproducible, isolated, and easier to manage.",
+    "crumbs": [
+      "Q&A"
+    ]
+  },
+  {
+    "objectID": "03-qa.html#what-happens-at-the-end-of-a-project",
+    "href": "03-qa.html#what-happens-at-the-end-of-a-project",
+    "title": "Q&A",
+    "section": "What happens at the end of a project?",
+    "text": "What happens at the end of a project?\n\n\nDeliverables are finalized in reports/.\n\nThe project subfolder is archived but not deleted.\n\nAccess permissions are reviewed and unnecessary accounts are removed.",
+    "crumbs": [
+      "Q&A"
+    ]
+  }
+]

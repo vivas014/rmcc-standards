@@ -1,0 +1,41 @@
+# Q&A {.unnumbered}
+
+This section collects common questions about how we organize and manage `projects` at RMCC. It is intended to clarify expectations and avoid misunderstandings.
+
+## Do we use GitHub or other version control tools?
+
+> No. At RMCC, all analyses are conducted within **R Projects** stored in our **Google Drive contract folders**. This ensures that data, code, and outputs are always in a single secure location, consistent with our compliance obligations. While GitHub and other version control systems are useful for software development, they are not appropriate here because:
+- Many of our projects involve sensitive or restricted-use data.  
+- External repositories may introduce unnecessary risks for data sharing.  
+- Google Drive already provides version history, recovery, and collaborative editing.  
+
+## How do we track versions of scripts and outputs?
+
+> 
+- Scripts are **numbered sequentially** (`00-`, `01-`, `02-`, …) to indicate their order of execution.  
+- Google Drive keeps a **file version history**, so prior versions can be recovered if needed.
+
+## What if multiple people are working on the same script?
+
+>
+- Only **one person at a time** should actively edit a script file.  
+- If collaboration is needed, break the workflow into multiple smaller scripts (`01-cleaning.R`, `02-analysis.R`, etc.) so work can be parallelized.  
+
+## What if I need to run a new analysis?
+
+> Every new major statistical analysis requires a **new project subfolder** inside the `contract`.  
+Follow the structure described in [Projects](02-projects.qmd):  
+- `scripts/`  
+- `data/`  
+- `reports/`  
+- `figs/`  
+- `assets/`  
+- `README.md`  
+This keeps analyses reproducible, isolated, and easier to manage.  
+
+## What happens at the end of a project?
+
+> 
+- Deliverables are finalized in `reports/`.  
+- The project subfolder is archived but **not deleted**.  
+- Access permissions are reviewed and unnecessary accounts are removed.  
